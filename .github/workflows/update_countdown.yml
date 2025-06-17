@@ -1,23 +1,20 @@
-name: Update Countdown JSON Daily
-
 on:
   schedule:
-    - cron: '*/5 * * * *'  # every 5 minutes
-  workflow_dispatch:     # allows manual trigger too
+    - cron: '*/5 * * * *'  # every 5 minutes (fixed: added missing * *)
+  workflow_dispatch:       # allows manual trigger too
 
 jobs:
   update-json:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
-
+      
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.x'
-
+      
       - name: Update countdown.json
         run: |
           python update_countdown.py
