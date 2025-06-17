@@ -1,7 +1,7 @@
 from datetime import datetime, timezone
 import json
 
-START_DATE = "2003-06-10"
+START_DATE = "2025-06-10"
 GOAL_DATE = "2033-06-10"
 
 def calculate_stats():
