@@ -1,7 +1,7 @@
 from datetime import datetime
 import json
 
-END_DATE = "2025-12-31"
+END_DATE = "2033-06-10"
 
 def calculate_weeks_left():
     end_date = datetime.strptime(END_DATE, "%Y-%m-%d")
