@@ -1,5 +1,9 @@
 {
-  "weeks_left": 416,
-  "end_date": "2033-06-10",
-  "note": "New Test"
+  "weeks_left": 429,
+  "days_left": 3004,
+  "hours_left": 72112,
+  "goal_date": "2033-10-15",
+  "current_age": 21,
+  "percent_to_30": 29.58,
+  "note": "Countdown to 30th birthday!"
 }
