@@ -1,0 +1,28 @@
+name: Update Countdown JSON Daily
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # runs daily at midnight UTC
+  workflow_dispatch:     # allows manual trigger too
+
+jobs:
+  update-json:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Update countdown.json
+        run: |
+          python update_countdown.py
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add countdown.json
+          git commit -m "Update countdown.json [skip ci]" || echo "No changes to commit"
+          git push
