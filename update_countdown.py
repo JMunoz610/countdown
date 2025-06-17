@@ -21,10 +21,12 @@ def calculate_stats():
     total_days_lived = (now - birth_date).days
     real_age = total_days_lived / 365.25
     current_age = int(real_age)
-    percent_to_30 = round(min(real_age / 30 * 100, 100), 2)
+    percent_birth_to_30 = round(min(real_age / 30 * 100, 100), 2)
     
-    # Days since start date (for tracking purposes)
+    # Progress from start date to goal date
     days_since_start = max((now - start_date).days, 0)
+    total_countdown_days = (goal_date - start_date).days
+    percent_start_to_goal = round(min((days_since_start / total_countdown_days) * 100, 100), 2)
     
     return {
         "weeks_left": weeks_left,
@@ -34,7 +36,8 @@ def calculate_stats():
         "start_date": START_DATE,
         "goal_date": GOAL_DATE,
         "current_age": current_age,
-        "percent_to_30": percent_to_30,
+        "percent_birth_to_30": percent_birth_to_30,
+        "percent_start_to_goal": percent_start_to_goal,
         "days_since_start": days_since_start,
         "last_updated": now.isoformat(),
         "note": "Countdown to 30th birthday!"
@@ -44,7 +47,7 @@ def main():
     data = calculate_stats()
     with open("countdown.json", "w") as f:
         json.dump(data, f, indent=2)
-    print(f"Updated countdown.json - {data['days_left']} days left until 30th birthday!")
+    print(f"Updated countdown.json - {data['days_left']} days left! Progress: {data['percent_birth_to_30']}% life to 30, {data['percent_start_to_goal']}% countdown done")
 
 if __name__ == "__main__":
     main()
