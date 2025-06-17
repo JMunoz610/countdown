@@ -2,7 +2,7 @@ name: Update Countdown JSON Daily
 
 on:
   schedule:
-    - cron: '0 4 * * *'  # runs daily at midnight UTC
+    - cron: '*/5 * * * *'  # every 5 minutes
   workflow_dispatch:     # allows manual trigger too
 
 jobs:
