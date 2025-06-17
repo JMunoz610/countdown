@@ -1,8 +1,8 @@
 from datetime import datetime
 
 # 🎯 Set your birthday and milestone
-BIRTH_DATE = "2003-10-15"       # Your actual birth date
-MILESTONE_DATE = "2033-10-15"   # Your 30th birthday
+BIRTH_DATE = "2003-06-10"       # Your actual birth date
+MILESTONE_DATE = "2033-06-10"   # Your 30th birthday
 
 def calculate_countdown():
     now = datetime.utcnow()
