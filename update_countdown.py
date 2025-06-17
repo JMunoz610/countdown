@@ -1,12 +1,12 @@
 from datetime import datetime, timezone
 import json
 
-BIRTH_DATE = "2003-06-10"
+START_DATE = "2003-06-10"
 GOAL_DATE = "2033-06-10"
 
 def calculate_stats():
     now = datetime.now(timezone.utc)
-    birth_date = datetime.strptime(BIRTH_DATE, "%Y-%m-%d").replace(tzinfo=timezone.utc)
+    start_date = datetime.strptime(START_DATE, "%Y-%m-%d").replace(tzinfo=timezone.utc)
     goal_date = datetime.strptime(GOAL_DATE, "%Y-%m-%d").replace(tzinfo=timezone.utc)
     
     # Time until goal
@@ -16,7 +16,7 @@ def calculate_stats():
     hours_left = max(int(time_left.total_seconds() // 3600), 0)
     
     # Age & percent progress
-    total_days_lived = (now - birth_date).days
+    total_days_lived = (now - start_date).days
     age_now = total_days_lived / 365.25
     current_age = int(age_now)
     percent_to_30 = round(min(age_now / 30 * 100, 100), 2)
