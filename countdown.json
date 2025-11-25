@@ -1,7 +1,7 @@
 {
   "weeks_left": 393,
   "days_left": 2753,
-  "hours_left": 66080,
+  "hours_left": 66079,
   "birth_date": "2003-06-10",
   "start_date": "2023-06-10",
   "goal_date": "2033-06-10",
@@ -9,6 +9,6 @@
   "percent_birth_to_30": 74.87,
   "percent_start_to_goal": 24.61,
   "days_since_start": 899,
-  "last_updated": "2025-11-25T15:13:05.833720+00:00",
+  "last_updated": "2025-11-25T16:15:29.529506+00:00",
   "note": "Countdown to 30th birthday!"
 }
