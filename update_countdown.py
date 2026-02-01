@@ -2,8 +2,8 @@ from datetime import datetime, timezone
 import json
 
 BIRTH_DATE = "2003-06-10"
-START_DATE = "2023-06-10"
-GOAL_DATE = "2033-06-10"
+START_DATE = "2026-01-11"
+GOAL_DATE = "2028-01-11"
 
 def calculate_stats():
     now = datetime.now(timezone.utc)
