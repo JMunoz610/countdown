@@ -1,14 +1,14 @@
 {
   "weeks_left": 65,
-  "days_left": 456,
-  "hours_left": 10956,
+  "days_left": 455,
+  "hours_left": 10931,
   "birth_date": "2003-06-10",
   "start_date": "2026-01-11",
   "goal_date": "2028-01-11",
   "current_age": 23,
-  "percent_birth_to_30": 77.79,
-  "percent_start_to_goal": 37.4,
-  "days_since_start": 273,
-  "last_updated": "2026-10-11T11:06:41.718450+00:00",
+  "percent_birth_to_30": 77.8,
+  "percent_start_to_goal": 37.53,
+  "days_since_start": 274,
+  "last_updated": "2026-10-12T12:35:52.218752+00:00",
   "note": "Countdown to 30th birthday!"
 }
